@@ -2,12 +2,12 @@ var libraryApp = angular.module("libraryApp", ['ngRoute']);
  
 // Configuration and Routing
 libraryApp.config(function($routeProvider, $locationProvider) {
-  $locationProvider
-    .html5Mode({
-      enabled: true,
-      requireBase: false
-    })
-    .hashPrefix('!');
+  // $locationProvider
+  //   .html5Mode({
+  //     enabled: true,
+  //     requireBase: false
+  //   })
+  //   .hashPrefix('!');
 
   $routeProvider
     .when("/",{
