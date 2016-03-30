@@ -1,0 +1,39 @@
+<form class="add-form">
+  <fieldset>
+    <label>Название</label>
+    <span>
+      <input type="input" name="name" ng-model="book.name" />
+    </span>
+    <div class="error" ng-show="nameRequired">{{nameRequired}}</div>
+  </fieldset>
+  <fieldset>
+    <label>Автор</label>
+    <span>
+      <input type="input" name="author" ng-model="book.author" />
+    </span>
+    <div class="error" ng-show="authorRequired">{{authorRequired}}</div>
+  </fieldset>
+  <fieldset>
+    <label>Описание</label>
+    <span>
+      <textarea name="description" ng-model="book.description"></textarea>
+    </span>
+  </fieldset>
+  <fieldset>
+    <label>Оценка</label>
+    <select name="rate" ng-model="book.rate">
+      <option value="" selected>не выбрана</option>
+      <option value="5">Отличная книга!</option>
+      <option value="4">Хорошая книга</option>
+      <option value="3">Нормальная книга</option>
+      <option value="2">Плохая книга</option>
+      <option value="1">Унылое говно</option>
+      <option value="0">КГ/АМ</option>
+    </select>
+    <div class="error" ng-show="rateRequired">{{rateRequired}}</div>
+  </fieldset>
+  <button type="submit" ng-if="!edit" ng-click="save_book()">Добавить книгу</button>
+  <button type="submit" ng-if="edit" ng-click="edit_book()">Сохранить изменения</button>
+  <button type="button" ng-click="back()">Отмена</button>
+
+</form>

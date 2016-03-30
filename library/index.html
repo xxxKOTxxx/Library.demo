@@ -1,0 +1,33 @@
+<html ng-app="libraryApp">
+<head>
+  <meta charset="UTF-8"> 
+  <title>Library</title>
+  <base href="/">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="./" title="Главная страница">Главная</a></li>
+        <li><a href="./books" title="Список книг">Список книг</a></li>
+        <li><a href="./authors" title="Список авторов">Список авторов</a></li>
+        <li><a href="./add" title="Добавить книгу">Добавить книгу</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="content" ng-view="">
+    
+  </div>
+  <footer>
+    
+  </footer>
+  <script src="js/angular/angular.min.js"></script>
+  <script src="js/angular/angular-route.min.js"></script>
+  <script src="js/libraryApp.js"></script>
+  <script src="js/controllers/mainPage.js"></script>
+  <script src="js/controllers/booksList.js"></script>
+  <script src="js/controllers/addBook.js"></script>
+  <script src="js/controllers/authorsList.js"></script>
+</body>
+</html>
