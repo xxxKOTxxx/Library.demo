@@ -1,5 +1,7 @@
 <div class="empty" ng-if="!length">У вас нет сохраненных книг</div>
-<a ng-if="!length" class="add" href="/#/add" title="Добавить книгу">Добавить книгу</a>
+<div class="actions">
+  <a ng-if="!length" class="add" href="./#/add" title="Добавить книгу">Добавить книгу</a>
+</div>
 <table ng-if="length">
   <caption>Список авторов</caption>
   <thead>
