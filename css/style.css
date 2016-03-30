@@ -33,6 +33,66 @@ header {
   flex: 1;
 }
 
+/* Common */
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.actions {
+  width: 100%;
+  max-width: 600px;
+  margin: 15px auto;
+}
+.actions a {
+  padding: 10px 20px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  color: 666;
+  background-color: #eee;
+  text-transform: uppercase;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+.actions a:hover {
+  color: 333;
+  background-color: #ccc;
+
+}
+.actions a:nth-child(1),
+.actions button:nth-child(1) {
+  float: left;
+}
+.actions a:nth-child(2),
+.actions button:nth-child(2) {
+  float: right;
+}
+.error {
+  display: block;
+  line-height: 22px;
+  color: #bd4646;
+}
+/* Main page */
+.main-page {
+  text-align: center;
+}
+.menu-title {
+  font-size: 20px;
+  line-height: 30px;
+}
+.main-menu {
+  width: 120px;
+  margin: auto;
+  list-style: none;
+  text-align: left;
+}
+.main-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  line-height: 20px;
+}
 /* Add form */
 .add-form {
   width: 100%;
@@ -90,6 +150,9 @@ th {
 .delete {
   cursor: pointer;
   color: #700;
+}
+.delete:hover {
+  background-color: #f77;
 }
 
 footer {

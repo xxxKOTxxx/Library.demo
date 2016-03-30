@@ -32,8 +32,9 @@
     </select>
     <div class="error" ng-show="rateRequired">{{rateRequired}}</div>
   </fieldset>
-  <button type="submit" ng-if="!edit" ng-click="save_book()">Добавить книгу</button>
-  <button type="submit" ng-if="edit" ng-click="edit_book()">Сохранить изменения</button>
-  <button type="button" ng-click="back()">Отмена</button>
-
+  <div class="actions">
+    <button type="submit" ng-if="!edit" ng-click="save_book()">Добавить книгу</button>
+    <button type="submit" ng-if="edit" ng-click="edit_book()">Сохранить изменения</button>
+    <button type="button" ng-click="back()">Отмена</button>
+  </div>
 </form>
