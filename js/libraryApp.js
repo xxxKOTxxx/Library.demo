@@ -10,7 +10,7 @@ libraryApp.config(function($routeProvider, $locationProvider) {
   //   .hashPrefix('!');
 
   $routeProvider
-    .when("/",{
+    .when("/index",{
       controller: "MainPage",
       templateUrl: "js/views/mainPage.html"
     })
@@ -34,5 +34,11 @@ libraryApp.config(function($routeProvider, $locationProvider) {
       controller: "AddBook",
       templateUrl: "js/views/addBook.html"
     })
-    .otherwise({"redirectTo": "/"});
+    .otherwise({"redirectTo": "/index"});
+});
+
+libraryApp.controller("Library", function ($scope, $routeParams, $location) {
+  $scope.getNavClass = function (path) {
+    return ($location.path().substr(0, path.length) === path) ? 'active' : '';
+  }
 });

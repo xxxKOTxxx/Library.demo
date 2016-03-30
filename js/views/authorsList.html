@@ -1,21 +1,26 @@
-<div class="empty" ng-if="!length">У вас нет сохраненных книг</div>
-<div class="actions">
-  <a ng-if="!length" class="add" href="./#/add" title="Добавить книгу">Добавить книгу</a>
+<div class="col-xs-12 col-sm-10 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+  <h1 class="page-header">Библиотека</h1>
+  <div class="panel-body" ng-if="!length">
+  <div class="alert alert-warning">У вас нет сохраненных книг</div>
+    <a class="btn btn-primary pull-left" href="./#/add" title="Добавить книгу"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Добавить книгу</a>
+  </div>
+  <div class="panel panel-primary" ng-if="length">
+    <div class="panel-heading">Список авторов</div>
+    <table ng-if="length" class="table">
+      <thead>
+        <tr>
+          <th>Имя автора</th>
+          <th>Написано книг</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="(name, books) in authors">
+          <td>
+            <a title="Все книги автора {{name}}" href="./#/books/{{name}}"><span class="glyphicon glyphicon-user"></span> {{name}}</a>
+          </td>
+          <td class="count"><span class="glyphicon glyphicon-book"></span> {{books}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-<table ng-if="length">
-  <caption>Список авторов</caption>
-  <thead>
-    <tr>
-      <th>Имя автора</th>
-      <th>Написано книг</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="(name, books) in authors">
-      <td>
-        <a title="Все книги автора {{name}}" href="./#/books/{{name}}">{{name}}</a>
-      </td>
-      <td class="count">{{books}}</td>
-    </tr>
-  </tbody>
-</table>

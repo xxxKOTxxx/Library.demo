@@ -1,27 +1,38 @@
-<!DOCTYPE html>
 <html ng-app="libraryApp">
 <head>
   <meta charset="UTF-8"> 
-  <title>Library App</title>
+  <title>Library</title>
   <base href="http://xxxkotxxx.github.io/library/">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header>
-    <nav>
-      <ul class="menu">
-        <li><a href="./#/" title="Главная страница">Главная</a></li>
-        <li><a href="./#/books" title="Список книг">Список книг</a></li>
-        <li><a href="./#/authors" title="Список авторов">Список авторов</a></li>
-        <li><a href="./#/add" title="Добавить книгу">Добавить книгу</a></li>
-      </ul>
-    </nav>
-  </header>
-  <div class="content" ng-view="">
-    
+<body ng-controller="Library">
+  <div class="wrap">
+    <header class="navbar navbar-inverse">
+      <nav>
+        <ul class="nav navbar-nav">
+          <li ng-class="getNavClass('/index')">
+            <a href="./#/index" title="Главная страница"><span class="glyphicon glyphicon-home"></span> Главная</a>
+          </li>
+          <li ng-class="getNavClass('/books')">
+            <a href="./#/books" title="Список книг"><span class="glyphicon glyphicon-book"></span> Список книг</a>
+          </li>
+          <li ng-class="getNavClass('/authors')">
+            <a href="./#/authors" title="Список авторов"><span class="glyphicon glyphicon-user"></span>  Список авторов</a>
+          </li>
+          <li ng-class="getNavClass('/add')">
+            <a href="./#/add" title="Добавить книгу"><span class="glyphicon glyphicon-plus"></span> Добавить книгу</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content row" ng-view="">
+      
+    </div>
   </div>
-  <footer>
-    
+  <footer class="navbar-inverse">
+    <div class="copy navbar-text">&copy; 2016 xxxKOTxxx</div>
   </footer>
   <script src="js/angular/angular.min.js"></script>
   <script src="js/angular/angular-route.min.js"></script>

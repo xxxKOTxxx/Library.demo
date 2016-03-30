@@ -1,4 +1,5 @@
 libraryApp.controller("AddBook", function ($scope, $routeParams, $location) {
+  $scope.title = 'Добавление книги';
   $scope.book = {};
   if($routeParams.index) {
     index = parseInt($routeParams.index);
@@ -7,6 +8,7 @@ libraryApp.controller("AddBook", function ($scope, $routeParams, $location) {
       $location.path('/');
     }
     $scope.edit = true;
+    $scope.title = 'Редактирование книги';
     currentBook = books[$routeParams.index];
     $scope.book = currentBook;
     if($scope.book.description == 'Нет описания') {
