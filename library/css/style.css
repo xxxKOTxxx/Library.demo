@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #333;
+}
+header {
+  padding: 0 25px;
+  background-color: #ccc;
+}
+.menu {
+  list-style: none;
+  font-size: 0;
+}
+.menu li {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 15px;
+  line-height: 15px;
+}
+.menu li a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #333;
+}
+.content {
+  padding: 20px 50px;
+  flex: 1;
+}
+
+/* Add form */
+.add-form {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+.add-form fieldset {
+  min-height: 40px;
+  padding: 5px 0;
+  border: 0 none;
+}
+.add-form label {
+  width: 75px;
+  padding-right: 5px;
+  text-align: right;
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+}
+.add-form span {
+  overflow: hidden;
+  display: block;
+}
+.add-form input,
+.add-form textarea {
+  width: 100%;
+}
+.add-form select {
+  padding: 0px 10px;
+  text-align: center;
+}
+/* Tables */
+table {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  border-collapse: collapse;
+  border: 0 none;
+}
+table caption {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+td,
+th {
+  padding: 5px 10px;
+  border: 1px solid #333;
+}
+.rate,
+.count,
+.delete {
+  text-align: center;
+}
+.delete {
+  cursor: pointer;
+  color: #700;
+}
+
+footer {
+  height: 50px;
+  padding: 0 50px;
+  background-color: #ccc;
+} 

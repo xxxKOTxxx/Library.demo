@@ -1,0 +1,26 @@
+<div class="empty" ng-if="!books.length">{{empty}}</div>
+<table ng-if="books.length">
+  <caption>Список книг <span ng-if="author"> автора {{author}}</span></caption>
+  <thead>
+    <tr>
+      <th>Название книги</th>
+      <th>Автор книги</th>
+      <th>Оценка книги</th>
+      <th>Действия</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in books track by $index">
+      <td>
+        <a title="Редактировать книгу" href="/edit/{{$index}}">{{item.name}}</a>
+      </td>
+      <td>
+        <a title="Все книги автора {{item.author}}" href="/books/{{item.author}}">{{item.author}}</a>
+      </td>
+      <td class="rate">{{item.rate}}</td>
+      <td class="delete" ng-click="delete(item)">Удалить</td>
+    </tr>
+  </tbody>
+</table>
+<a class="add" href="/add" title="Добавить книгу">Добавить книгу</a>
+<a ng-if="filtered" class="all" href="/books" title="Все книги">Показать книги всех авторов</a>
