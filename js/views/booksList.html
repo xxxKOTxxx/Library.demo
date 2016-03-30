@@ -12,10 +12,10 @@
   <tbody>
     <tr ng-repeat="item in books track by $index">
       <td>
-        <a title="Редактировать книгу" href="/edit/{{$index}}">{{item.name}}</a>
+        <a title="Редактировать книгу" href="./#/edit/{{$index}}">{{item.name}}</a>
       </td>
       <td>
-        <a title="Все книги автора {{item.author}}" href="/books/{{item.author}}">{{item.author}}</a>
+        <a title="Все книги автора {{item.author}}" href="./#/books/{{item.author}}">{{item.author}}</a>
       </td>
       <td class="rate">{{item.rate}}</td>
       <td class="delete" ng-click="delete(item)">Удалить</td>
